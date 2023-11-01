@@ -50,6 +50,6 @@ def get_winner(input_board):
 	for row in input_board:
 		for col in row:
 			if col == '':
-				return None
+				return ''
 	print('Draw')
 	return 'Draw'
