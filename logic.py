@@ -6,28 +6,10 @@ def make_empty_board():
     ]
 
 
-def show_board(board):
-	for row in board:
-		print(row)
 
-
-def input_move(board):
-	try:
-		r = int(input("input row index: "))
-		c = int(input("input col index: "))
-	except:
-		raise ValueError('input invalid, not int')
-	else:
-		if r < 0 or r > 2 or c < 0 or c > 2:
-			raise ValueError('input invalid, should >=0 and <=2')
-		if board[r][c] != '':
-			raise ValueError('input invalid, index already input')
-		return r, c
-        
-
-def change_turn(old: str):
-	if old == 'X':
-		new = 'Y'
+def other_player(player):
+	if now == 'X':
+              next = 'Y"
 	else:
 		new = 'X'
 	return new
